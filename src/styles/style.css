@@ -1,0 +1,413 @@
+/* https://colorhunt.co/palette/f4f4f2e8e8e8bbbfca495464 */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial,
+    sans-serif;
+}
+
+/* main {
+  min-height: 83.5vh;
+} */
+
+:root {
+  --container-background : #F4F4F2;
+  --container-font-color: #303030;
+
+}
+
+[data-theme='dark'] {
+  --container-background : #303030;
+  --container-font-color: #F4F4F2;
+
+}
+
+input[type=text] {
+  background-color: var(--container-background);
+  color: var(--container-font-color);
+}
+
+.logRegInput {
+  background-color: var(--container-background);
+  color: var(--container-font-color);
+}
+main {
+  min-height: 83.5vh;
+  background-color: var(--container-background);
+  color: var(--container-font-color);
+}
+
+input,
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  margin: 8px 0;
+  border: 1px solid #bbbfca;
+}
+
+/*Header*/
+.note-header {
+  position: sticky;
+  top: 0;
+}
+
+.note-header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: #495464;
+  padding: 8px;
+  color: #f4f4f2;
+}
+
+h1 {
+  font-size: 1.5em;
+  padding: 12px;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+}
+
+.navigation li {
+  display: inline-block;
+  padding: 12px;
+}
+
+.navigation ul li a {
+  font-size: 24px;
+  color: #f4f4f2;
+}
+
+.nav-text {
+  font-size: 1em;
+}
+
+.nav-button {
+  background-color: transparent;
+  color: #f4f4f2;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0;
+}
+
+.nav-button:hover {
+  box-shadow: none;
+}
+
+/*search and input*/
+.note-input__char-limit {
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.note-search,
+.note-input,
+.note-list {
+  padding: 14px;
+}
+
+.note-search>input {
+  width: 100%;
+}
+
+.note-input textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.note-input input,
+.note-input textarea,
+.note-input button {
+  display: block;
+  width: 100%;
+}
+
+button {
+  padding: 12px;
+  border-radius: 5px;
+  border: transparent;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #495464;
+  color: #f4f4f2;
+}
+
+.note-input__body {
+  width: 100%;
+  height: 350px;
+  border: 1px solid #bbbfca;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px auto 10px auto;
+}
+
+[contenteditable='true']:empty:before {
+  content: attr(data-placeholder);
+  color: #7a7775;
+  font-size: 14px;
+}
+
+.add-page-title {
+  padding: 14px 0 0 14px;
+}
+
+/*Content*/
+.note-content {
+  margin: 0 15px;
+}
+
+.note-list__content {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.note-item {
+  border: 1px solid #bbbfca;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+
+.note-item-content {
+  flex: 1 1;
+  padding: 10px;
+}
+
+.note-item__date {
+  color: var(--container-font-color);
+  font-size: 0.9em;
+  text-align: right;
+  margin-bottom: 6px;
+}
+
+.note-item__title a {
+  color: var(--container-font-color);
+}
+
+.note-item__body,
+.note-detail__body {
+  padding: 10px;
+}
+
+.note-item-action {
+  display: flex;
+}
+
+.note-item-action__archive,
+.note-item-action__unarchive,
+.note-item-action__delete {
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+  gap: 1em;
+}
+
+.note-item-action__archive,
+.note-item-action__unarchive {
+  border-radius: 0 0 0 5px;
+  color: #43c696;
+}
+
+.note-item-action__delete {
+  border-radius: 0 0 5px 0;
+  color: #f14131;
+}
+
+.icon-archive,
+.icon-unarchive,
+.icon-delete {
+  font-size: 22px;
+  padding: 4px 0 0 0;
+}
+
+.note-item-action__archive:hover,
+.note-item-action__unarchive:hover {
+  background-color: #43c696;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+.note-item-action__delete:hover {
+  background-color: #f14131;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+.note-empty {
+  text-align: center;
+  padding: 8px;
+  color: #495464;
+}
+
+.note-detail {
+  margin: 12px auto;
+}
+
+.note-detail-content {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.note-detail__title {
+  text-decoration: underline;
+}
+
+.note-detail__date {
+  color: var(--container-font-color);
+  margin: 4px 0 12px 0;
+}
+
+.note-content__title {
+  text-align: center;
+  padding: 12px;
+}
+
+.error-text {
+  text-align: center;
+  margin: 12px 0;
+}
+
+/*Footer*/
+.note-footer {
+  background-color: #495464;
+  padding: 12px;
+  color: #f4f4f2;
+}
+
+.note-footer__content {
+  text-align: center;
+}
+
+/*LOGIN REGISTER*/
+.login-page,
+.register-page {
+  width: 80%;
+  padding: 14px 0;
+  margin: 0 auto;
+}
+
+.login-input,
+.register-input {
+  display: flex;
+  flex-direction: column;
+  margin: 26px 0;
+}
+
+#logRegText {
+  margin-left: 4px;
+  color: var(--container-font-color);
+}
+
+#logRegText:visited {
+  color: var(--container-font-color);
+}
+
+#logRegButton {
+  margin-top: 14px;
+}
+
+@media screen and (min-width: 425px) {
+  .note-search>input {
+    min-width: 220px;
+  }
+
+  .note-content {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    padding: 16px;
+  }
+
+  .note-header__content {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .note-item-content {
+    padding: 20px;
+  }
+
+  .navigation ul li a {
+    font-size: 26px;
+  }
+
+  .note-detail-content {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .note-item {
+    margin: 10px;
+  }
+
+  .note-list__content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .note-item {
+    margin: 10px;
+  }
+
+  .note-list__content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+#indicator {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  border: 16px solid #495464;
+  border-radius: 50%;
+  border-top: 16px solid var(--container-background);
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  display: block;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
